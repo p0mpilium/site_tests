@@ -26,7 +26,7 @@ body {
 h1, h2, h3, ul, form {
     text-align: center;
     width: 100%;
-    max-width: 500px; /* Установите максимальную ширину для центрирования */
+    max-width: 500px; 
 }
 
 a {
@@ -63,7 +63,7 @@ input[type="text"],
 input[type="email"],
 input[type="password"],
 select {
-    width: calc(100% - 20px); /* Учитывает padding */
+    width: calc(100% - 20px);
     padding: 10px;
     margin: 10px 0;
     border-radius: var(--border-radius);
@@ -93,7 +93,7 @@ button {
     border-radius: var(--border-radius);
     cursor: pointer;
     transition: background-color 0.3s ease;
-    margin: 5px; /* Добавлен внешний отступ */
+    margin: 5px; 
 }
 
 button:hover {
@@ -107,8 +107,6 @@ button:hover {
     border-radius: 5px;
 }
 
-
-/* Стили для не мобильных устройств */
 @media screen and (min-width: 1024px) {
     body {
         padding: 40px;
