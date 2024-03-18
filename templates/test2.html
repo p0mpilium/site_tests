@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Тест teen</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Тест teen</h1>
+    <form action="/result" method="post" id="testForm">
+        <input type="hidden" name="test_id" value="1">
+        <div class="question-box">
+            <p>Вопрос_1 (?)</p>
+            <input type="radio" name="question1" value="1"> Ответ 1<br>
+            <input type="radio" name="question1" value="2"> Ответ 2<br>
+            <input type="radio" name="question1" value="3"> Ответ 3<br>
+            <input type="radio" name="question1" value="4"> ответ 4<br>
+        </div>
+        <input type="hidden" name="test_id" value="2">
+        <div class="question-box">
+            <p>Вопрос_2 (?)</p>
+            <input type="radio" name="question2" value="1"> Ответ 1<br>
+            <input type="radio" name="question2" value="2"> Ответ 2<br>
+            <input type="radio" name="question2" value="3"> Ответ 3<br>
+            <input type="radio" name="question3" value="4"> ответ 4<br>
+        </div>
+        <input type="hidden" name="test_id" value="3">
+        <div class="question-box">
+            <p>Вопрос_3 (?)</p>
+            <input type="radio" name="question3" value="9"> Ответ 1<br>
+            <input type="radio" name="question3" value="10"> Ответ 2<br>
+            <input type="radio" name="question3" value="11"> Ответ 3<br>
+            <input type="radio" name="question4" value="12"> ответ 4<br>
+        </div>
+        <!-- Добавьте другие вопросы в свои рамочки -->
+        <button type="submit" name="action" value="complete">Закончить и отправить ответы</button>
+        <button type="button" onclick="endTestEarly()">Закончить предварительно</button>
+    </form>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+        const savedProgress = localStorage.getItem('testProgress');
+            if (savedProgress) {
+                const answers = JSON.parse(savedProgress);
+                for (const [key, value] of Object.entries(answers)) {
+                    const input = document.querySelector(`input[name="${key}"][value="${value}"]`);
+                    if (input) {
+                        input.checked = true;
+                    }
+                }
+            }
+        });
+
+        function endTestEarly() {
+            function saveProgress() {
+                const form = document.getElementById('testForm');
+                const answers = {};
+
+                // Сохраняем все ответы в объект answers
+                form.querySelectorAll('input[type="radio"]:checked').forEach(input => {
+                    answers[input.name] = input.value;
+                });
+
+                // Сохраняем объект answers в localStorage в формате JSON
+                localStorage.setItem('testProgress', JSON.stringify(answers));
+
+                alert('Прогресс теста сохранен');
+            }
+            alert('Тест завершен предварительно');
+            window.location.href = '/'; // Перенаправление на главную страницу
+        }
+    </script>
+</body>
+</html>

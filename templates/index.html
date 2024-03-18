@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Психологические тесты</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Выберите тест</h1>
+    <form id="ageForm">
+        <label for="age">Выберите ваш возраст:</label>
+        <select id="age" name="age">
+            <option value="">Пожалуйста, выберите</option>
+            <option value="child">Дети (до 12)</option>
+            <option value="teen">Подростки (13-17)</option>
+            <option value="young">Молодёжь (18-24)</option>
+            <option value="adult">Взрослые (25-59)</option>
+            <option value="senior">Пожилые (60+)</option>
+        </select>
+        <button type="button" onclick="updateTests()">Подтвердить</button>
+        <button type="button" onclick="resetAge()">Сбросить возраст</button>
+    </form>
+    
+    <div id="testsDiv"></div>
+    
+    <script>
+        function updateTests() {
+            var ageGroup = document.getElementById('age').value;
+            var testsDiv = document.getElementById('testsDiv'); // Получаем элемент
+            testsDiv.innerHTML = ''; // Очистите предыдущие тесты
+        
+            if (ageGroup == 'child') {
+                testsDiv.innerHTML += '<li><a href="/test/1">Тест для ребёнка</a></li>';
+            } else if (ageGroup == 'teen') {
+                testsDiv.innerHTML += '<li><a href="/test/2">Тест для подростков</a></li>';
+            } else if(ageGroup == 'young'){
+                testsDiv.innerHTML += '<li><a href="/test/3">Тест для представителя молодёжи</a></li>';
+            } else if(ageGroup == 'adult'){
+                testsDiv.innerHTML += '<li><a href="/test/4">Тест для взрослого человека</a></li>';
+            } else if(ageGroup == 'senior'){
+                testsDiv.innerHTML += '<li><a href="/test/5">Тест для смешарика</a></li>';
+            }
+        }
+        
+        function resetAge() {
+            document.getElementById('age').value = ''; // Сбросить выбранное значение возраста
+            var testsDiv = document.getElementById('testsDiv'); // Получаем элемент
+            testsDiv.innerHTML = '';
+        }
+    </script>
+        
+</body>
+</html>

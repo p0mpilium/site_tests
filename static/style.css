@@ -1,0 +1,125 @@
+:root {
+    --font-primary: 'Segoe UI', Arial, sans-serif;
+    --color-primary: #007bff;
+    --color-secondary: #0056b3;
+    --color-text: #333;
+    --color-background: #f4f4f4;
+    --color-form-background: #fff;
+    --color-hover: #ff7851;
+    --border-radius: 8px;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: var(--font-primary);
+    color: var(--color-text);
+    background-color: var(--color-background);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+h1, h2, h3, ul, form {
+    text-align: center;
+    width: 100%;
+    max-width: 500px; /* Установите максимальную ширину для центрирования */
+}
+
+a {
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--color-hover);
+    text-decoration: underline;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+form {
+    background-color: var(--color-form-background);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select {
+    width: calc(100% - 20px); /* Учитывает padding */
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: var(--border-radius);
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--color-hover);
+}
+
+button {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 5px; /* Добавлен внешний отступ */
+}
+
+button:hover {
+    background-color: var(--color-hover);
+}
+
+.question-box {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+
+/* Стили для не мобильных устройств */
+@media screen and (min-width: 1024px) {
+    body {
+        padding: 40px;
+    }
+
+    form {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    form:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+}
