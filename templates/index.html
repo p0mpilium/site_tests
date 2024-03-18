@@ -26,8 +26,8 @@
     <script>
         function updateTests() {
             var ageGroup = document.getElementById('age').value;
-            var testsDiv = document.getElementById('testsDiv'); // Получаем элемент
-            testsDiv.innerHTML = ''; // Очистите предыдущие тесты
+            var testsDiv = document.getElementById('testsDiv'); 
+            testsDiv.innerHTML = ''; 
         
             if (ageGroup == 'child') {
                 testsDiv.innerHTML += '<li><a href="/test/1">Тест для ребёнка</a></li>';
@@ -43,8 +43,8 @@
         }
         
         function resetAge() {
-            document.getElementById('age').value = ''; // Сбросить выбранное значение возраста
-            var testsDiv = document.getElementById('testsDiv'); // Получаем элемент
+            document.getElementById('age').value = ''; 
+            var testsDiv = document.getElementById('testsDiv'); 
             testsDiv.innerHTML = '';
         }
     </script>
