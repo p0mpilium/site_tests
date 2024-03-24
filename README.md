@@ -29,58 +29,34 @@
     cd [название твоей магической папки]
     ```
 
-21. **Если не хочется маяться с самим гитом**
+3. **Если не хочется маяться с самим гитом**
     
-    Нажимаем на зеленую кнопку 
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-    .code-button {
-        background-color: #4CAF50; /* Зеленый */
-        border: none;
-        color: white;
-        padding: 10px 20px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-        margin: 4px 2px;
-        cursor: pointer;
-        border-radius: 4px;
-    }
-
-    .code-button:hover {
-        background-color: #45a049;
-    }
-    </style>
-    </head>
-    <body>
-
-    <button class="code-button">Code</button>
-
-    </body>
-    </html>
+    Нажимаем на зеленую кнопку <span style="color: green;"><> Code</span>
     <p align="center">
-    <img width="500px" src="readme md1.jpg" alt="qr"/>
+    <img width="650px" src="readme md1.jpg" alt="qr"/>
     </p>
     
 
-3. **Создаем место для магии (виртуальное окружение):**
+4. **Создаем место для магии (виртуальное окружение):**
 
     Если ты впервые слышишь о такой магии, прочитай [здесь](https://docs.python.org/3/library/venv.html).
 
     ```bash
-    python3 -m venv venv
+    python3 -m venv venv #Если python3 не работает, попробуй просто python или py, как у меня
     ```
+    <p align="center">
+    <img width="650px" src="readme md3.jpg" alt="qr"/>
+    <img width="650px" src="readme md2.jpg" alt="qr"/>
+    </p>
 
-4. **Подготавливаем ингредиенты (устанавливаем зависимости):**
+5. **Подготавливаем ингредиенты (устанавливаем зависимости):**
 
     ```bash
     pip install -r requirements.txt
     ```
+    <p align="center">
+    <img width="650px" src="readme md4.jpg" alt="qr"/>
+    </p>
 
 ### Что тебе понадобится в этом путешествии:
 
@@ -90,11 +66,11 @@
 
 ## Как это запустить?
 
-Просто произнеси заклинание:
+Просто произнеси заклинание, прописав его в терминал:
 
 ```bash
-python app.py
-
+python app.py #Если не работает python, попробуй обязательно python3 или py
+```
 
 И открывай `http://localhost:5000`. Вуаля, всё работает!
 
