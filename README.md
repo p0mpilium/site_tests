@@ -30,9 +30,41 @@
     ```
 
 21. **Если не хочется маяться с самим гитом**
+    
+    Нажимаем на зеленую кнопку 
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    .code-button {
+        background-color: #4CAF50; /* Зеленый */
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 4px;
+    }
 
+    .code-button:hover {
+        background-color: #45a049;
+    }
+    </style>
+    </head>
+    <body>
+
+    <button class="code-button">Code</button>
+
+    </body>
+    </html>
     <p align="center">
-    <img width="200px" src="readme md1.jpg" alt="qr"/>
+    <img width="500px" src="readme md1.jpg" alt="qr"/>
     </p>
     
 
