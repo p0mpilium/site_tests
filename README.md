@@ -31,7 +31,7 @@
 
 3. **Если не хочется маяться с самим гитом**
     
-    Нажимаем на зеленую кнопку ![<> Code](https://img.shields.io/badge/Status-Active-green)
+    Нажимаем на зеленую кнопку ![<> Code](https://img.shields.io/badge/<>Code-green)
 
     <p align="center">
     <img width="650px" src="readme md1.jpg" alt="qr"/>
