@@ -47,6 +47,8 @@
     ```
     <p align="center">
     <img width="650px" src="readme md2.jpg" alt="qr"/>
+    </p>
+    <p align="center">
     <img width="650px" src="readme md3.jpg" alt="qr"/>
     </p>
 
