@@ -62,7 +62,7 @@
 
 ```bash
 python app.py
-
+```
 
 И открывай `http://localhost:5000`. Вуаля, всё работает!
 
