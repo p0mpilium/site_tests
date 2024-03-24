@@ -31,7 +31,8 @@
 
 3. **Если не хочется маяться с самим гитом**
     
-    Нажимаем на зеленую кнопку <span style="color: green;"><> Code</span>
+    Нажимаем на зеленую кнопку ![<> Code](https://img.shields.io/badge/Status-Active-green)
+
     <p align="center">
     <img width="650px" src="readme md1.jpg" alt="qr"/>
     </p>
@@ -45,8 +46,8 @@
     python3 -m venv venv #Если python3 не работает, попробуй просто python или py, как у меня
     ```
     <p align="center">
-    <img width="650px" src="readme md3.jpg" alt="qr"/>
     <img width="650px" src="readme md2.jpg" alt="qr"/>
+    <img width="650px" src="readme md3.jpg" alt="qr"/>
     </p>
 
 5. **Подготавливаем ингредиенты (устанавливаем зависимости):**
